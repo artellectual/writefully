@@ -6,5 +6,4 @@ module ApplicationHelper
       render 'signed_out'
     end
   end
-
 end
