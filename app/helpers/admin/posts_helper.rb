@@ -4,7 +4,7 @@ module Admin
       def render_states(view)
         view.sanitize(
           statuses(view).map do |status, path|
-            view.content_tag :li do
+            view.content_tag :li, class: active(view, path) do
               view.link_to status, path
             end
           end.join
@@ -12,6 +12,10 @@ module Admin
       end
 
       private
+
+      def active(view, path)
+        view.current_page?(path) ? 'active' : nil
+      end
 
       def statuses(view)
         # { 'all' => admin_posts_path,
