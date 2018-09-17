@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   enum status: { draft: 0, published: 1 } do
     event :publish do
       after do
