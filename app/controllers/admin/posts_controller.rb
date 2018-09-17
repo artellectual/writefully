@@ -1,6 +1,6 @@
 class Admin::PostsController < Admin::BaseController
   def index
-    @posts = scoped_posts.order("created_at DESC").page(params[:page]).per(10)
+    @posts = scoped_posts.includes(:tags).order("created_at DESC").page(params[:page]).per(10)
   end
 
   def new
