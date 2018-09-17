@@ -2,7 +2,7 @@
   <h2><%= link_to post.title, post_path(post) %></h2>
   <p><%= time_ago_in_words(post.published_at) %> ago</p>
   <p><%= post.body %></p>
-  <p>Comments(<%= post.comments.count %>)</p>
+  <p>Comments(<%= post.comments_count %>)</p>
   <ul>
     <% post.tags.each do |tag| %>
       <li><%= tag.name %></li>
