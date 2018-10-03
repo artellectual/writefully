@@ -49,6 +49,6 @@ private
   end
 
   def post_params
-    params.require(:post).permit(:state_event, :title, :body, :tag_ids => [])
+    params.require(:post).permit(:state_event, :cover_picture, :title, :body, :tag_ids => [])
   end
 end
